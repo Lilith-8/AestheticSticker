@@ -1,28 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flower Stickers</title>
+  <title>Flower Sticker Shop</title>
   <style>
-    /* existing styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffeef8, #ffdef0, #ffeef9);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      color: #ff69b4;
+    }
+
+    h1 {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 3em;
+      color: #ff1493;
+      margin-top: 20px;
+      text-shadow: 2px 2px #ffd9ec;
+    }
+
+    p {
+      font-style: italic;
+      color: #ff85b7;
+      margin-bottom: 20px;
+      font-size: 1.2em;
+    }
+
+    .stickers {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .sticker-card {
+      background: #fff0f5;
+      border-radius: 15px;
+      padding: 10px;
+      width: 150px;
+      box-shadow: 0 0 10px #ffb6c1;
+      transition: transform 0.3s ease;
+    }
+
+    .sticker-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px #ff69b4;
+    }
+
+    .sticker-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .buy-button {
+      margin-top: 8px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff69b4;
+      color: white;
+      font-size: 0.9em;
+      cursor: pointer;
+      box-shadow: 0 0 8px #ffb6c1;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .buy-button:hover {
+      background-color: #ff1493;
+      transform: scale(1.05);
+    }
+
+    .cart-link {
+      display: block;
+      margin-top: 10px;
+      color: #d63384;
+      text-decoration: underline;
+      font-weight: bold;
+    }
 
     @media (max-width: 600px) {
-      .stickers img {
-        width: 80px;
+      .sticker-card {
+        width: 120px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Flower Stickers</h1>
-  <p style="font-style: italic; color: #ff85b7; margin-bottom: 10px;">
-    Collect your favorite floral vibes — perfect for laptops, journals, and phones!
-  </p>
+  <h1>Flower Sticker Shop</h1>
+  <p>Collect dreamy floral stickers to decorate your life — pink, cute, & perfect!</p>
   <div class="stickers">
-    <img src="https://i.postimg.cc/DZsj3w32/aasy55u06.png" alt="Pink hibiscus flower sticker" loading="lazy" />
-    <img src="https://i.postimg.cc/bw9SWXBK/96c542d6327eb6855e8684cc680294.png" alt="Pastel floral bouquet sticker" loading="lazy" />
-    <img src="https://i.postimg.cc/d3wzWyZM/ac7nzr8z3.png" alt="Cute cherry blossom sticker" loading="lazy" />
-    <img src="https://i.postimg.cc/nVW4Gty2/transparent-hibiscus-flower-detailed-pink-hibiscus-flower-with-star-1710878161094.png" alt="Detailed pink hibiscus flower with stars sticker" loading="lazy" />
-    <img src="https://i.postimg.cc/ZqD8st9J/350e460630f2bb97a4b9329ced9ddc.png" alt="Vibrant floral sticker" loading="lazy" />
-    <img src="https://i.postimg.cc/dtLKgGSv/f7ad16d43fa52153663034b2ad77a1.png" alt="Delicate flower petals sticker" loading="lazy" />
+    <div class="sticker-card">
+      <img src="https://i.postimg.cc/DZsj3w32/aasy55u06.png" alt="Pink hibiscus sticker" loading="lazy">
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="sticker-card">
+      <img src="https://i.postimg.cc/bw9SWXBK/96c542d6327eb6855e8684cc680294.png" alt="Pastel floral sticker" loading="lazy">
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="sticker-card">
+      <img src="https://i.postimg.cc/d3wzWyZM/ac7nzr8z3.png" alt="Cherry blossom sticker" loading="lazy">
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="sticker-card">
+      <img src="https://i.postimg.cc/nVW4Gty2/transparent-hibiscus-flower-detailed-pink-hibiscus-flower-with-star-1710878161094.png" alt="Star hibiscus sticker" loading="lazy">
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="sticker-card">
+      <img src="https://i.postimg.cc/ZqD8st9J/350e460630f2bb97a4b9329ced9ddc.png" alt="Vibrant flower sticker" loading="lazy">
+      <button class="buy-button">Buy Now</button>
+    </div>
+    <div class="sticker-card">
+      <img src="https://i.postimg.cc/dtLKgGSv/f7ad16d43fa52153663034b2ad77a1.png" alt="Soft petal sticker" loading="lazy">
+      <button class="buy-button">Buy Now</button>
+    </div>
   </div>
+
+  <a class="cart-link" href="#">View Your Cart</a>
 </body>
+        </html>
